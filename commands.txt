@@ -1,0 +1,17 @@
+
+Build qemu:
+git clone https://git.qemu.org/git/qemu.git
+cd qemu
+git submodule update --init --recursive
+mkdir _build
+cd _build
+../configure --target-list=riscv32-linux-user --prefix=/home/obs/rep/riscv-tests/qemu_riscv
+
+
+Build gcc toolchain:
+git clone https://github.com/riscv/riscv-gnu-toolchain
+cd riscv-gnu-toolchain
+git submodule update --init --recursive
+mkdir _build
+cd _build
+../configure --prefix=/home/obs/rep/riscv-tests/gcc_riscv --with-arch=rv32gc --with-abi=ilp32d
