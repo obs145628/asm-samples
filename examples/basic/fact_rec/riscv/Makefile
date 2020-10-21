@@ -1,7 +1,7 @@
 
 APP     := test.out
 C_OBJS    := test.o
-S_OBJS    := lib.o
+S_OBJS    := riscv/lib.o
 
 CC      := riscv32-unknown-elf-gcc
 LD      := riscv32-unknown-elf-gcc
