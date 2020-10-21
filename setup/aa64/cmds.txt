@@ -1,0 +1,10 @@
+
+
+# Build Image
+sudo docker build --tag test-aa64:1.0 .
+
+# Run Image
+sudo docker run -it --name dd test-aa64:1.0
+
+# Stop and remove image
+sudo docker rm --force dd
